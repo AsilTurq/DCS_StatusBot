@@ -1,0 +1,50 @@
+# ==============================================================================
+# DCS_StatusBot — Example Discord Channels & Server Cards (config/servers.yaml)
+# DCS_StatusBot — Örnek Discord Kanal ve Sunucu Kart Ayarları (config/servers.yaml)
+# ==============================================================================
+# [EN] USAGE (ENGLISH):
+#   1. Enable "Developer Mode" in Discord (User Settings -> Advanced -> Developer Mode).
+#   2. Right-click your Discord text channels -> "Copy Channel ID" and paste below.
+#   3. Replace the server names ("DCS Server #1 - Syria", etc.) so they match the exact
+#      ["name"] inside each server's Saved Games\...\Config\serverSettings.lua file.
+#
+# [TR] KULLANIM (TÜRKÇE):
+#   1. Discord'da "Kullanıcı Ayarları -> Gelişmiş -> Geliştirici Modu" seçeneğini açın.
+#   2. Discord metin kanallarına sağ tıklayıp "Kanal ID'sini Kopyala" diyerek aşağıya yapıştırın.
+#   3. Sunucu adlarını ("DCS Server #1 - Syria" vb.) kendi serverSettings.lua dosyanızdaki
+#      ["name"] alanıyla birebir aynı olacak şekilde düzenleyin.
+# ==============================================================================
+
+DEFAULT:
+  # [EN] Default AFK & Server Full messages | [TR] Varsayılan AFK ve Sunucu Dolu mesajları
+  message_afk: "{player.name}, you have been moved to spectators due to inactivity / AFK süresi dolduğu için izleyiciye alındınız."
+  message_server_full: "Server is currently full, please try again later / Sunucu şu anda dolu, lütfen daha sonra tekrar deneyin."
+  channels:
+    admin: PASTE_ADMIN_COMMAND_CHANNEL_ID_HERE      # [EN] Admin Command Channel ID | [TR] Admin Komut Kanal ID
+
+# ------------------------------------------------------------------------------
+# [EN] Server #1 Discord Channels | [TR] 1. Sunucu Discord Kanalları
+# ------------------------------------------------------------------------------
+"DCS Server #1 - Syria":
+  channels:
+    status: PASTE_SERVER_1_STATUS_CHANNEL_ID_HERE   # [EN] Live Status Embed Channel | [TR] Durum Tablosu Kanal ID
+    chat: PASTE_SERVER_1_IN_GAME_CHAT_CHANNEL_ID    # [EN] In-Game Chat Channel (-1) | [TR] Oyun İçi Sohbet Kanal ID
+  no_coalition_chat: true
+
+# ------------------------------------------------------------------------------
+# [EN] Server #2 Discord Channels | [TR] 2. Sunucu Discord Kanalları
+# ------------------------------------------------------------------------------
+"DCS Server #2 - Caucasus":
+  channels:
+    status: PASTE_SERVER_2_STATUS_CHANNEL_ID_HERE   # [EN] Live Status Embed Channel | [TR] Durum Tablosu Kanal ID
+    chat: PASTE_SERVER_2_IN_GAME_CHAT_CHANNEL_ID    # [EN] In-Game Chat Channel (-1) | [TR] Oyun İçi Sohbet Kanal ID
+  no_coalition_chat: true
+
+# ------------------------------------------------------------------------------
+# [EN] Server #3 Discord Channels | [TR] 3. Sunucu Discord Kanalları
+# ------------------------------------------------------------------------------
+"DCS Server #3 - PersianGulf":
+  channels:
+    status: PASTE_SERVER_3_STATUS_CHANNEL_ID_HERE   # [EN] Live Status Embed Channel | [TR] Durum Tablosu Kanal ID
+    chat: PASTE_SERVER_3_IN_GAME_CHAT_CHANNEL_ID    # [EN] In-Game Chat Channel (-1) | [TR] Oyun İçi Sohbet Kanal ID
+  no_coalition_chat: true

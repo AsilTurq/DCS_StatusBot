@@ -1,0 +1,8 @@
+# Güvenlik Kuralı: Gerçek Token, şifre ve yerel yapılandırma dosyaları asla Git'e yüklenmez
+.env
+config.json
+config/
+__pycache__/
+*.pyc
+*.log
+2

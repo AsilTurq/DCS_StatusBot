@@ -1,0 +1,74 @@
+# ==============================================================================
+# DCS_StatusBot — Example Multi-Server Node Config (config/nodes.yaml)
+# DCS_StatusBot — Örnek Çoklu Sunucu ve Makine Ayarları (config/nodes.yaml)
+# ==============================================================================
+# [EN] USAGE (ENGLISH):
+#   - locale       : Set interface language ("en" for English, "tr" for Turkish).
+#   - public_ip    : Your server's static Public IP (or remove line to auto-detect).
+#   - installation : Path to your DCS World Dedicated Server installation directory.
+#   - instances    : Configure 1 to 5 DCS Server profiles (ports 10308-10312, WebGUI 8088-8092).
+#
+# [TR] KULLANIM (TÜRKÇE):
+#   - locale       : Arayüz dili ("en" = İngilizce, "tr" = Türkçe).
+#   - public_ip    : Sunucunuzun statik IP adresi (otomatik algılama için satırı silebilirsiniz).
+#   - installation : DCS World Dedicated Server kurulum klasörünüzün tam yolu.
+#   - instances    : 1'den 5'e kadar DCS Sunucu profillerini tanımlayın (Port 10308-10312).
+# ==============================================================================
+
+MyNode:
+  locale: en                                    # [EN] "en" or "tr"          | [TR] Dil: "en" veya "tr"
+  public_ip: PASTE_YOUR_SERVER_PUBLIC_IP_HERE   # [EN] e.g. 85.100.XX.XX     | [TR] Örn: 85.100.XX.XX
+  listen_address: 0.0.0.0
+  listen_port: 10042
+  slow_system: false
+  preferred_installation: E:\DCS_SERVER
+  DCS:
+    installation: E:\DCS_SERVER
+    autoupdate: false
+  database:
+    url: postgres://dcsserverbot:PASTE_DB_PASSWORD_HERE@127.0.0.1:5432/dcsserverbot
+
+  instances:
+    # --------------------------------------------------------------------------
+    # [EN] Server #1 (Syria Map)      | [TR] 1. Sunucu (Suriye Haritası)
+    # --------------------------------------------------------------------------
+    DCS_Server_1:
+      home: E:\DCS_Server_SaveGames\1_Suriye
+      bot_port: 6666
+      webgui_port: 8088
+      dcs_port: 10308
+      extensions:
+        SRS:
+          config: E:\DCS_Server_SaveGames\1_Suriye\Config\SRS.cfg
+          host: 127.0.0.1
+          port: 5002
+        Tacview:
+          show_passwords: false
+
+    # --------------------------------------------------------------------------
+    # [EN] Server #2 (Caucasus Map)   | [TR] 2. Sunucu (Kafkas Haritası)
+    # --------------------------------------------------------------------------
+    DCS_Server_2:
+      home: E:\DCS_Server_SaveGames\2_Kafkas
+      bot_port: 6667
+      webgui_port: 8089
+      dcs_port: 10309
+      extensions:
+        SRS:
+          config: E:\DCS_Server_SaveGames\2_Kafkas\Config\SRS.cfg
+          host: 127.0.0.1
+          port: 5003
+
+    # --------------------------------------------------------------------------
+    # [EN] Server #3 (Persian Gulf)   | [TR] 3. Sunucu (İran / Basra Körfezi)
+    # --------------------------------------------------------------------------
+    DCS_Server_3:
+      home: E:\DCS_Server_SaveGames\3_Iran
+      bot_port: 6668
+      webgui_port: 8090
+      dcs_port: 10310
+      extensions:
+        SRS:
+          config: E:\DCS_Server_SaveGames\3_Iran\Config\SRS.cfg
+          host: 127.0.0.1
+          port: 5004

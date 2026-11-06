@@ -1,0 +1,34 @@
+# ==============================================================================
+# DCS_StatusBot — Example Main Discord Bot Config (config/services/bot.yaml)
+# DCS_StatusBot — Örnek Ana Discord Bot Ayarları (config/services/bot.yaml)
+# ==============================================================================
+# [EN] USAGE (ENGLISH):
+#   - guild_id : Your Discord Server ID (Right-click server icon -> Copy Server ID).
+#   - token    : Your main Discord Bot Token from Discord Developer Portal.
+#   - owner    : Your personal Discord User ID (Right-click your profile -> Copy User ID).
+#   - roles    : Map your Discord Admin and DCS Admin role names or Role IDs.
+#
+# [TR] KULLANIM (TÜRKÇE):
+#   - guild_id : Discord sunucunuzun ID numarası (Sunucu simgesine sağ tık -> Sunucu ID Kopyala).
+#   - token    : Discord Developer Portal'dan aldığınız Ana Bot Token'ı.
+#   - owner    : Kendi Discord Kullanıcı ID numaranız (Profilinize sağ tık -> Kullanıcı ID Kopyala).
+#   - roles    : Discord sunucunuzdaki Yönetici (Admin) ve DCS Admin rol adları veya ID'leri.
+# ==============================================================================
+
+guild_id: PASTE_DISCORD_SERVER_ID_HERE          # [EN] Discord Guild ID   | [TR] Discord Sunucu ID
+token: PASTE_MAIN_DISCORD_BOT_TOKEN_HERE        # [EN] Main Bot Token     | [TR] Ana Bot Token
+owner: PASTE_YOUR_DISCORD_USER_ID_HERE          # [EN] Owner User ID      | [TR] Kurucu Kullanıcı ID
+use_dashboard: true
+chat_command_prefix: .
+
+roles:
+  Admin:
+    - Admin
+    - PASTE_ADMIN_ROLE_ID_OR_NAME               # [EN] Admin Role ID/Name | [TR] Yönetici Rol ID/Adı
+  DCS Admin:
+    - DCS Admin
+    - Moderator
+  DCS:
+    - "@everyone"
+
+audit_channel: PASTE_AUDIT_LOG_CHANNEL_ID_HERE  # [EN] Audit Channel ID   | [TR] Denetim Log Kanal ID
